@@ -1,0 +1,15 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heritageBg" x1="600" y1="0" x2="600" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE7C7" />
+      <stop offset="100%" stop-color="#DFA16C" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#heritageBg)" />
+  <circle cx="300" cy="220" r="80" fill="#FFFFFF" opacity="0.7" />
+  <path d="M160 680 H1040 C980 520 860 340 690 300 C520 260 360 320 280 420 C220 500 180 590 160 680 Z" fill="#A66C3A" />
+  <path d="M180 620 C240 520 320 460 420 420 C520 380 620 380 720 420 C820 460 900 540 930 640" stroke="#F8E3CB" stroke-width="40" stroke-linecap="round" fill="none" />
+  <path d="M410 350 C450 300 520 280 590 300 C660 320 720 380 740 420" stroke="#8A5A2F" stroke-width="32" stroke-linecap="round" fill="none" />
+  <path d="M480 460 H720" stroke="#F8E3CB" stroke-width="22" stroke-linecap="round" />
+  <path d="M520 520 H680" stroke="#F8E3CB" stroke-width="18" stroke-linecap="round" />
+</svg>
