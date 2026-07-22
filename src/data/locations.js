@@ -191,7 +191,7 @@ const locations = [
     description:
       "Walk through Sunderkhal village to discover tribal paintings, bamboo crafts, and the stories behind each feature of local life.",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=1200&q=80",
     guideName: "Sundar Lal",
     guidePhone: "919111111111",
     location: "Sunderkhal, Jharkhand",
@@ -266,6 +266,69 @@ const locations = [
       "Fresh local fish fry by the river",
     ],
     includes: ["Coracle ride fee", "Life jackets", "Local guide"],
+  },
+  {
+    id: "13",
+    title: "Kodaikanal Pine Forest Walk",
+    category: "Hill Station",
+    price: 1200,
+    description:
+      "Trek through the misty pine forests of Kodaikanal with an expert naturalist, learning about the unique montane ecosystem and local flora.",
+    image:
+      "https://images.unsplash.com/photo-1572948682181-db40bbf4f738?auto=format&fit=crop&w=1200&q=80",
+    guideName: "Meenakshi Iyer",
+    guidePhone: "919000000004",
+    location: "Dindigul District, Tamil Nadu",
+    bestTime: "September to May",
+    duration: "Half day",
+    highlights: [
+      "Guided walk through dense pine forests",
+      "Bird watching and nature photography",
+      "Picnic lunch in the woods",
+    ],
+    includes: ["Naturalist guide", "Forest entry fee", "Picnic lunch"],
+  },
+  {
+    id: "14",
+    title: "Mahabalipuram Heritage Tour",
+    category: "Tribal Art",
+    price: 850,
+    description:
+      "Explore the ancient stone carvings and rock-cut temples of Mahabalipuram, led by a local art historian who reveals the stories behind the sculptures.",
+    image:
+      "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    guideName: "Raja Chola",
+    guidePhone: "919000000005",
+    location: "Chengalpattu District, Tamil Nadu",
+    bestTime: "November to February",
+    duration: "1 day",
+    highlights: [
+      "Shore Temple and Five Rathas tour",
+      "Live stone carving demonstration",
+      "Traditional South Indian thali lunch",
+    ],
+    includes: ["Expert guide", "Monument entry tickets", "Lunch"],
+  },
+  {
+    id: "15",
+    title: "Pichavaram Mangrove Eco-Boat",
+    category: "Wildlife",
+    price: 700,
+    description:
+      "Navigate the intricate canals of the Pichavaram mangrove forest in a traditional rowboat, spotting migratory birds and understanding mangrove conservation.",
+    image:
+      "https://images.unsplash.com/photo-1624632000547-410a56e263ab?auto=format&fit=crop&w=1200&q=80",
+    guideName: "Anbu Selvan",
+    guidePhone: "919000000006",
+    location: "Cuddalore District, Tamil Nadu",
+    bestTime: "November to March",
+    duration: "Half day",
+    highlights: [
+      "Rowboat ride through mangrove tunnels",
+      "Birdwatching for kingfishers and herons",
+      "Interaction with local fishing community",
+    ],
+    includes: ["Boat fee", "Local boatman guide", "Refreshments"],
   }
 ];
 
