@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { MapPin, Menu, X } from 'lucide-react';
+import { MapPin, Menu, X, LogOut } from 'lucide-react';
 import { useState } from 'react';
 
 const links = [
@@ -8,7 +8,7 @@ const links = [
   { to: '/culture', label: 'Culture' },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onLogout }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -20,7 +20,7 @@ export default function Navbar() {
             <span>Johar Trails</span>
           </Link>
 
-          <div className="hidden sm:flex space-x-6">
+          <div className="hidden sm:flex items-center space-x-6">
             {links.map((l) => (
               <NavLink
                 key={l.to}
@@ -32,6 +32,12 @@ export default function Navbar() {
                 {l.label}
               </NavLink>
             ))}
+            <button 
+              onClick={onLogout}
+              className="flex items-center gap-1 text-sm font-medium bg-emerald-700 hover:bg-emerald-600 px-3 py-1.5 rounded-lg transition"
+            >
+              <LogOut className="w-4 h-4" /> Logout
+            </button>
           </div>
 
           <button
@@ -57,6 +63,15 @@ export default function Navbar() {
                 {l.label}
               </NavLink>
             ))}
+            <button 
+              onClick={() => {
+                setOpen(false);
+                onLogout();
+              }}
+              className="flex items-center gap-1 text-sm font-medium text-left transition hover:text-emerald-300"
+            >
+              <LogOut className="w-4 h-4" /> Logout
+            </button>
           </div>
         )}
       </div>

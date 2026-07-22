@@ -204,6 +204,69 @@ const locations = [
     ],
     includes: ["Local guide", "Craft tour", "Lunch with a host family"],
   },
+  {
+    id: "10",
+    title: "Ooty Tea Garden Trek",
+    category: "Hill Station",
+    price: 1500,
+    description:
+      "Walk through lush green tea estates in the Nilgiris, visit a local tea factory, and enjoy the misty mountain views while supporting local estate workers.",
+    image:
+      "https://images.unsplash.com/photo-1605557202138-16e6d1c92576?auto=format&fit=crop&w=1200&q=80",
+    guideName: "Karthik Raj",
+    guidePhone: "919000000001",
+    location: "Nilgiris District, Tamil Nadu",
+    bestTime: "September to June",
+    duration: "1 day",
+    highlights: [
+      "Guided walk through tea estates",
+      "Tea tasting and processing tour",
+      "Panoramic views of the Nilgiri hills",
+    ],
+    includes: ["Local guide", "Tea tasting session", "Transport from town"],
+  },
+  {
+    id: "11",
+    title: "Mudumalai Wildlife Safari",
+    category: "Wildlife",
+    price: 1800,
+    description:
+      "Spot elephants, tigers, and Indian gaurs in their natural habitat with a verified local forest guide in the dense jungles of Mudumalai.",
+    image:
+      "https://images.unsplash.com/photo-1588523315995-1f9e2b101168?auto=format&fit=crop&w=1200&q=80",
+    guideName: "Murugan Swamy",
+    guidePhone: "919000000002",
+    location: "Mudumalai National Park, Tamil Nadu",
+    bestTime: "October to May",
+    duration: "Half day",
+    highlights: [
+      "Jeep safari through dense forests",
+      "High chances of spotting wild elephants",
+      "Nature photography",
+    ],
+    includes: ["Safari jeep and permits", "Forest guide", "Water and snacks"],
+  },
+  {
+    id: "12",
+    title: "Hogenakkal Coracle Ride",
+    category: "Falls",
+    price: 900,
+    description:
+      "Experience a traditional coracle boat ride near the majestic Hogenakkal falls on the Kaveri river, guided by skilled local boatmen.",
+    image:
+      "https://images.unsplash.com/photo-1621235122119-9430c5e7b233?auto=format&fit=crop&w=1200&q=80",
+    guideName: "Selvam Kumar",
+    guidePhone: "919000000003",
+    location: "Dharmapuri District, Tamil Nadu",
+    bestTime: "August to December",
+    duration: "Half day",
+    highlights: [
+      "Thrilling round-boat (coracle) ride",
+      "Close-up view of the cascading falls",
+      "Fresh local fish fry by the river",
+    ],
+    includes: ["Coracle ride fee", "Life jackets", "Local guide"],
+  }
 ];
 
 export default locations;

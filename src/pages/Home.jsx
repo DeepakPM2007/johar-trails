@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="bg-emerald-900 text-white py-32 px-6 text-center">
         <h1 className="text-5xl font-extrabold tracking-tight mb-6">
-          Discover the Untouched <span className="text-emerald-400">Jharkhand</span>
+          Discover Untouched <span className="text-emerald-400">Destinations</span>
         </h1>
         <p className="text-lg md:text-xl text-emerald-100 max-w-2xl mx-auto mb-10">
           Connect directly with local tribal guides, explore sacred waterfalls, and experience eco-tourism that gives back to the community.

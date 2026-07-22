@@ -27,6 +27,13 @@ const communities = [
     note:
       "Concentrated in the Kolhan region of West Singhbhum. Distinct for the Warang Chiti script and a rich tradition of seasonal songs tied to the agricultural calendar.",
   },
+  {
+    name: "Toda",
+    image:
+      "https://images.unsplash.com/photo-1662991054593-f11dae6c2780?auto=format&fit=crop&w=800&q=80",
+    note:
+      "An indigenous community of the Nilgiri Hills in Tamil Nadu, known for their unique barrel-shaped huts, dairy-based culture, and distinct red-and-black embroidery.",
+  }
 ];
 
 const artForms = [
@@ -37,7 +44,7 @@ const artForms = [
       "https://images.unsplash.com/photo-1582561833074-3ef331dbc4c9?auto=format&fit=crop&w=800&q=80",
     description:
       "Mud-wall murals made during the Sohrai harvest festival, using natural ochre, black manganese, and white chalk pigments to depict animals, trees, and plant motifs. Best experienced first-hand in the villages around Hazaribagh.",
-    region: "Hazaribagh district",
+    region: "Hazaribagh district, Jharkhand",
   },
   {
     name: "Khovar painting",
@@ -46,7 +53,7 @@ const artForms = [
       "https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=800&q=80",
     description:
       "A wedding-season wall art tradition made using a comb-cut technique on wet clay to reveal a lighter layer beneath. Practised mainly by women, alongside Sohrai, around the Hazaribagh region.",
-    region: "Hazaribagh district",
+    region: "Hazaribagh district, Jharkhand",
   },
   {
     name: "Paitkar scroll painting",
@@ -55,7 +62,7 @@ const artForms = [
       "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80",
     description:
       "A centuries-old scroll-painting tradition depicting folk stories and the afterlife journey of the soul, traditionally narrated by travelling artists as the scroll unrolls, panel by panel.",
-    region: "Amadubi village, East Singhbhum",
+    region: "Amadubi village, Jharkhand",
   },
   {
     name: "Chhau dance",
@@ -64,38 +71,56 @@ const artForms = [
       "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80",
     description:
       "A masked, martial-rooted dance form performed at the Chaitra Parva festival, combining acrobatics, folk theatre, and percussion. Seraikella Chhau, one of three regional styles, originates in Jharkhand.",
-    region: "Seraikella-Kharsawan",
+    region: "Seraikella-Kharsawan, Jharkhand",
   },
+  {
+    name: "Tanjore painting",
+    category: "Mural art",
+    image:
+      "https://images.unsplash.com/photo-1623062339599-52e008ff77bb?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A classical South Indian painting style, characterized by rich, flat colors, simple iconic composition, and glittering gold foils overlaid on delicate gesso work.",
+    region: "Thanjavur, Tamil Nadu",
+  },
+  {
+    name: "Bharatanatyam",
+    category: "Performance",
+    image:
+      "https://images.unsplash.com/photo-1647413554160-c4e2db9a2862?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A major form of Indian classical dance that originated in Tamil Nadu. It expresses South Indian religious themes and spiritual ideas, particularly of Shaivism and Vaishnavism.",
+    region: "Tamil Nadu",
+  }
 ];
 
 const festivals = [
   {
     name: "Sarhul",
-    season: "Spring (Chaitra, Mar\u2013Apr)",
-    note: "Worship of the sal tree marking the new year and the start of the harvest cycle, celebrated by the Oraon, Munda, and other communities.",
+    season: "Spring (Chaitra, Mar–Apr)",
+    note: "Worship of the sal tree marking the new year and the start of the harvest cycle, celebrated by the Oraon, Munda, and other communities in Jharkhand.",
   },
   {
     name: "Karma",
-    season: "Monsoon (Bhadra, Aug\u2013Sep)",
-    note: "Dedicated to the Karam tree, celebrated with the Karam Dand ritual, folk songs, and all-night community dance.",
+    season: "Monsoon (Bhadra, Aug–Sep)",
+    note: "Dedicated to the Karam tree, celebrated with the Karam Dand ritual, folk songs, and all-night community dance in Jharkhand.",
   },
   {
     name: "Sohrai",
-    season: "Post-harvest (Kartik, Oct\u2013Nov)",
-    note: "A cattle and harvest festival marked by the mural-painting tradition of the same name, when homes are freshly painted to welcome the harvest.",
+    season: "Post-harvest (Kartik, Oct–Nov)",
+    note: "A cattle and harvest festival marked by the mural-painting tradition of the same name, when homes are freshly painted to welcome the harvest in Jharkhand.",
   },
   {
-    name: "Shravani Mela",
-    season: "Monsoon (Shravan, Jul\u2013Aug)",
-    note: "Lakhs of Kanwariya pilgrims walk to the Baidyanath temple in Deoghar carrying holy water from the Ganges, one of India's longest annual pilgrim walks.",
-  },
+    name: "Pongal",
+    season: "Winter (Thai, Jan)",
+    note: "A multi-day Hindu harvest festival of South India, particularly in the Tamil community. It is dedicated to the Sun god, Surya.",
+  }
 ];
 
 const etiquette = [
-  "Ask before photographing people, homes, or ritual sites \u2014 many Sarna groves and ceremonies are not open to outsiders without permission.",
-  "Buy Sohrai, Khovar, and Paitkar art directly from the artists or village cooperatives rather than resellers, so the income reaches the makers.",
+  "Ask before photographing people, homes, or ritual sites — many sacred groves and ceremonies are not open to outsiders without permission.",
+  "Buy local art directly from the artists or village cooperatives rather than resellers, so the income reaches the makers.",
   "Dress modestly when visiting temples, sacred groves, and village ceremonies.",
-  "Hire local guides for forest and heritage walks \u2014 they carry knowledge that isn't written down, and it keeps tourism income within the community.",
+  "Hire local guides for forest and heritage walks — they carry knowledge that isn't written down, and it keeps tourism income within the community.",
 ];
 
 export { communities, artForms, festivals, etiquette };
