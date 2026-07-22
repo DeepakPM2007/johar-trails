@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from './firebase';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,26 +12,26 @@ import Login from './pages/Login';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loggedInUser = localStorage.getItem('johar_user');
-    if (loggedInUser) {
-      setUser(JSON.parse(loggedInUser));
-    }
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+    return () => unsubscribe();
   }, []);
 
-  const handleLogin = (userData) => {
-    setUser(userData);
-    localStorage.setItem('johar_user', JSON.stringify(userData));
+  const handleLogout = async () => {
+    await signOut(auth);
   };
 
-  const handleLogout = () => {
-    setUser(null);
-    localStorage.removeItem('johar_user');
-  };
+  if (loading) {
+    return <div className="min-h-screen flex items-center justify-center bg-gray-50"><p>Loading...</p></div>;
+  }
 
   if (!user) {
-    return <Login onLogin={handleLogin} />;
+    return <Login />;
   }
 
   return (
