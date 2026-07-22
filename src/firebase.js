@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCuPrOJQMxAs68hBS8iE0fkHXfKKTJae1w",
-  authDomain: "johar-trails-mvp.firebaseapp.com",
-  projectId: "johar-trails-mvp",
-  storageBucket: "johar-trails-mvp.firebasestorage.app",
-  messagingSenderId: "959436443582",
-  appId: "1:959436443582:web:b097b4239790a6b4e2b3ef",
-  measurementId: "G-DR047WC4G7"
+  apiKey: "AIzaSyBQNMh7p7KZ3ByOAPrRmSerbCBxsNIDfuw",
+  authDomain: "johar-trails.firebaseapp.com",
+  projectId: "johar-trails",
+  storageBucket: "johar-trails.firebasestorage.app",
+  messagingSenderId: "955849303449",
+  appId: "1:955849303449:web:7b048f1710a7f123f85f08",
+  measurementId: "G-BSZREDWLH0"
 };
 
 // Initialize Firebase
