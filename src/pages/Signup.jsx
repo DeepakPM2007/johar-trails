@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
-export default function Login() {
+export default function Signup() {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
     setError("");
     setLoading(true);
@@ -18,13 +18,15 @@ export default function Login() {
     const email = id.includes("@") ? id : `${id}@johartrails.com`;
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (err) {
-      if (err.code === "auth/user-not-found" || err.code === "auth/invalid-credential") {
-        setError("Invalid ID or Password. Check your spelling or Sign Up.");
+      if (err.code === "auth/weak-password") {
+        setError("Password should be at least 6 characters.");
+      } else if (err.code === "auth/email-already-in-use") {
+        setError("User ID already exists. Please Sign In instead.");
       } else {
-        setError("Login failed. Please try again.");
+        setError(err.message);
       }
     } finally {
       setLoading(false);
@@ -41,11 +43,11 @@ export default function Login() {
 
       <div className="relative z-10 max-w-md w-full bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl mx-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900">Welcome Back</h2>
-          <p className="mt-2 text-sm text-gray-600">Please sign in to access Johar Trails</p>
+          <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
+          <p className="mt-2 text-sm text-gray-600">Join Johar Trails to explore hidden gems.</p>
         </div>
         
-        <form onSubmit={handleLogin} className="space-y-6">
+        <form onSubmit={handleSignup} className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">User ID / Email</label>
             <input
@@ -53,7 +55,7 @@ export default function Login() {
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white/50"
               value={id}
               onChange={(e) => setId(e.target.value)}
-              placeholder="Enter your ID (e.g. deepak)"
+              placeholder="Enter a username or email"
               required
             />
           </div>
@@ -64,8 +66,9 @@ export default function Login() {
               className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-white/50"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
+              placeholder="At least 6 characters"
               required
+              minLength={6}
             />
           </div>
           {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
@@ -75,14 +78,14 @@ export default function Login() {
             disabled={loading}
             className="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow-lg shadow-emerald-200 disabled:opacity-50"
           >
-            {loading ? "Signing In..." : "Sign In"}
+            {loading ? "Creating..." : "Sign Up"}
           </button>
         </form>
 
         <p className="mt-6 text-center text-sm text-gray-600">
-          Don't have an account?{" "}
-          <Link to="/signup" className="text-emerald-600 hover:text-emerald-800 font-semibold transition">
-            Sign up here
+          Already have an account?{" "}
+          <Link to="/login" className="text-emerald-600 hover:text-emerald-800 font-semibold transition">
+            Sign in here
           </Link>
         </p>
       </div>

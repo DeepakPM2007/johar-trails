@@ -8,7 +8,7 @@ const links = [
   { to: '/culture', label: 'Culture' },
 ];
 
-export default function Navbar({ onLogout }) {
+export default function Navbar({ onLogout, user }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -32,12 +32,24 @@ export default function Navbar({ onLogout }) {
                 {l.label}
               </NavLink>
             ))}
-            <button 
-              onClick={onLogout}
-              className="flex items-center gap-1 text-sm font-medium bg-emerald-700 hover:bg-emerald-600 px-3 py-1.5 rounded-lg transition"
-            >
-              <LogOut className="w-4 h-4" /> Logout
-            </button>
+            
+            {user ? (
+              <button 
+                onClick={onLogout}
+                className="flex items-center gap-1 text-sm font-medium bg-emerald-700 hover:bg-emerald-600 px-3 py-1.5 rounded-lg transition"
+              >
+                <LogOut className="w-4 h-4" /> Logout
+              </button>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Link to="/login" className="text-sm font-medium hover:text-emerald-300 transition">
+                  Sign In
+                </Link>
+                <Link to="/signup" className="text-sm font-medium bg-white text-emerald-800 hover:bg-emerald-50 px-3 py-1.5 rounded-lg transition">
+                  Sign Up
+                </Link>
+              </div>
+            )}
           </div>
 
           <button
@@ -63,15 +75,27 @@ export default function Navbar({ onLogout }) {
                 {l.label}
               </NavLink>
             ))}
-            <button 
-              onClick={() => {
-                setOpen(false);
-                onLogout();
-              }}
-              className="flex items-center gap-1 text-sm font-medium text-left transition hover:text-emerald-300"
-            >
-              <LogOut className="w-4 h-4" /> Logout
-            </button>
+            
+            {user ? (
+              <button 
+                onClick={() => {
+                  setOpen(false);
+                  onLogout();
+                }}
+                className="flex items-center gap-1 text-sm font-medium text-left transition hover:text-emerald-300"
+              >
+                <LogOut className="w-4 h-4" /> Logout
+              </button>
+            ) : (
+              <div className="flex flex-col gap-2 pt-2 border-t border-emerald-700 mt-2">
+                <Link to="/login" onClick={() => setOpen(false)} className="text-sm font-medium hover:text-emerald-300 transition">
+                  Sign In
+                </Link>
+                <Link to="/signup" onClick={() => setOpen(false)} className="text-sm font-medium text-emerald-300 hover:text-emerald-200 transition">
+                  Create Account
+                </Link>
+              </div>
+            )}
           </div>
         )}
       </div>
